@@ -10,7 +10,7 @@ public:
     Node();
      Node(string key_, int value_, Node &link_);
    //CopyConstructor
-    Node(const Node& copy);
+//    const Node &other
 
     //Deconstructor
     ~Node();
@@ -25,11 +25,13 @@ public:
     void set_value(int value_);
     void set_key(string key_);
 
+
 private :
     string key;
     int value;
     //char salt;
    Node* link;
+   //Helper Functions
 
 };
 Node::Node()
@@ -50,20 +52,20 @@ Node::Node(string key_, int value_,Node& link_)
 
 
 }
-Node::Node(const Node& copy)
-{
-    key=copy.get_key();
-    value=copy.get_value();
-    link=copy.get_link();
-}
-void Node::copy(const Node &other)
-{
-    key=other.get_key();
-    value=other.value();
-}
+//Node::Node(const Node& copy)
+//{
+//    key=copy.get_key();
+//    value=copy.get_value();
+//    link=copy.get_link();
+//}
+//void Node::copy(const Node &other)
+//{
+//    key=other.get_key();
+//    value=other.value();
+//}
 Node::~Node()
 {
-    delete p
+//    delete p
 }
 //Accessors
 int Node::get_value()
